@@ -17,7 +17,28 @@ public class TheApp {
 
 
         //testing the reservation
-        Reservation pototaReservation = new Reservation()
+        Reservation pototaReservation = new Reservation("king", 1, false);
+
+        //check the price
+        System.out.println(pototaReservation.getPrice());
+
+        //check the reservation total
+        System.out.println(pototaReservation.getReservationTotal());
+
+        //change to a weekend
+        pototaReservation.setWeekend(true);
+
+        //check the price
+        System.out.println(pototaReservation.getPrice());
+
+        //check the reservation total
+        System.out.println(pototaReservation.getReservationTotal());
+
+        //change number of nights
+        pototaReservation.setNumberOfNights(2);
+
+        //check the reservation total
+        System.out.println(pototaReservation.getReservationTotal());
 
     }
 }

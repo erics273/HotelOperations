@@ -64,7 +64,7 @@ public class Reservation {
 
         //handle the weekend increase
         if(this.isWeekend()){
-            total += total + (total * .1);
+            total = total + (total * .1);
         }
 
         return total;
