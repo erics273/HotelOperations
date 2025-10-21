@@ -65,7 +65,7 @@ public class Employee {
         //calculate regular and overtime pay assuming 1.5 the pay rate for overtime.
         //that was not in the instructions
         double regularPay = this.getRegularHours() * this.getPayRate();
-        double overTimePay = this. getOvertimeHours() * this.getPayRate() * 1.5;
+        double overTimePay = this.getOvertimeHours() * this.getPayRate() * 1.5;
 
         return regularPay + overTimePay;
     }
@@ -86,7 +86,7 @@ public class Employee {
 //            return this.getHoursWorked() - 40;
 //        }
 //
-//        return 0
+//        return 0;
 
         return this.getHoursWorked() > 40 ? this.getHoursWorked() - 40 : 0;
     }
