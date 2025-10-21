@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.time.LocalDateTime;
+
 public class Employee {
 
     //class attributes
@@ -100,6 +102,22 @@ public class Employee {
 
     public void punchOut(double time){
         this.hoursWorked += time - this.startTime;
+    }
+
+    //overloaded method that uses the current time
+    public void punchIn(){
+        LocalDateTime now = LocalDateTime.now();
+        double currentTime = now.getHour() + (now.getMinute() / 60.0);
+
+        this.punchIn(currentTime);
+    }
+
+    //overloaded method that uses the current time
+    public void punchOut(){
+        LocalDateTime now = LocalDateTime.now();
+        double currentTime = now.getHour() + (now.getMinute() / 60.0);
+
+        this.punchOut(currentTime);
     }
 
     public void punchTimeCard(double punchInTime, double punchOutTime){

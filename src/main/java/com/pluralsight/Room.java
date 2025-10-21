@@ -60,8 +60,13 @@ public class Room {
     //check-in method
     //Once a room has been checked in, it should be occupied and marked as dirty.
     public void checkIn() {
-        this.setOccupied(true);
-        this.setDirty(true);
+        if(!this.isOccupied){
+            this.setOccupied(true);
+            this.setDirty(true);
+        }else{
+            System.out.println("sorry the room isn't available");
+        }
+
     }
 
     //check-out method
