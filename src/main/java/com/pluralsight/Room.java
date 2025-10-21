@@ -47,10 +47,13 @@ public class Room {
     }
 
     public boolean isAvailable(){
-        if(!this.isDirty() && !this.isOccupied()){
-            return true;
-        }
+//        if(!this.isDirty() && !this.isOccupied()){
+//            return true;
+//        }
+//
+//        return false;
 
-        return false;
+        return !this.isDirty() && !this.isOccupied();
+
     }
 }
