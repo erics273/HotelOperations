@@ -71,5 +71,15 @@ public class TheApp {
 
         //print total pay
         System.out.println(potatoEmployee.getTotalPay());
+
+        //test punch in/out methods
+        potatoEmployee.punchIn(13);
+        potatoEmployee.punchOut(14);
+
+        System.out.println(potatoEmployee.getHoursWorked());
+
+        //test punch time card method
+        potatoEmployee.punchTimeCard(13, 14);
+        System.out.println(potatoEmployee.getHoursWorked());
     }
 }

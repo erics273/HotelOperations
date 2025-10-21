@@ -8,6 +8,7 @@ public class Employee {
     private String department;
     private double payRate;
     private int hoursWorked;
+    private double startTime;
 
     //the constructor to help us create an employee
     public Employee(int employeeId, String name, String department, double payRate, int hoursWorked) {
@@ -89,6 +90,21 @@ public class Employee {
 //        return 0;
 
         return this.getHoursWorked() > 40 ? this.getHoursWorked() - 40 : 0;
+    }
+
+    //punch-in method to capture start time
+    //I need to store this so I can use it's value in punch-out
+    public void punchIn(double time){
+        this.startTime = time;
+    }
+
+    public void punchOut(double time){
+        this.hoursWorked += time - this.startTime;
+    }
+
+    public void punchTimeCard(double punchInTime, double punchOutTime){
+        this.punchIn(punchInTime);
+        this.punchOut(punchOutTime);
     }
 
 }
