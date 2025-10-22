@@ -9,11 +9,11 @@ public class Employee {
     private String name;
     private String department;
     private double payRate;
-    private int hoursWorked;
+    private double hoursWorked;
     private double startTime;
 
     //the constructor to help us create an employee
-    public Employee(int employeeId, String name, String department, double payRate, int hoursWorked) {
+    public Employee(int employeeId, String name, String department, double payRate, double hoursWorked) {
         this.employeeId = employeeId;
         this.name = name;
         this.department = department;
@@ -54,11 +54,11 @@ public class Employee {
         this.payRate = payRate;
     }
 
-    public int getHoursWorked() {
+    public double getHoursWorked() {
         return hoursWorked;
     }
 
-    public void setHoursWorked(int hoursWorked) {
+    public void setHoursWorked(double hoursWorked) {
         this.hoursWorked = hoursWorked;
     }
 
@@ -73,7 +73,7 @@ public class Employee {
         return regularPay + overTimePay;
     }
 
-    public int getRegularHours() {
+    public double getRegularHours() {
 
 //        if( this.getHoursWorked() > 40){
 //            return 40;
@@ -84,7 +84,7 @@ public class Employee {
         return this.getHoursWorked() > 40 ? 40 : this.getHoursWorked();
     }
 
-    public int getOvertimeHours() {
+    public double getOvertimeHours() {
 //        if( this.getHoursWorked() > 40){
 //            return this.getHoursWorked() - 40;
 //        }
@@ -109,6 +109,7 @@ public class Employee {
         LocalDateTime now = LocalDateTime.now();
         double currentTime = now.getHour() + (now.getMinute() / 60.0);
 
+        //let the orignial punch-in do its job
         this.punchIn(currentTime);
     }
 
