@@ -79,14 +79,4 @@ public class Hotel {
         return bookedBasicRooms;
     }
 
-    public void setBookedSuites(int bookedSuites) {
-        this.bookedSuites = bookedSuites;
-    }
-
-    public void setBookedBasicRooms(int bookedBasicRooms) {
-        this.bookedBasicRooms = bookedBasicRooms;
-    }
-
-
-
 }
